@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 18:55:19.879" rpa="false" schemaversion="4">
+<suite id="s1" name="Siva" source="/home/buzzadmin/robotframework/siva">
+<suite id="s1-s1" name="Buzzworks" source="/home/buzzadmin/robotframework/siva/buzzworks.robot">
+<test id="s1-s1-t1" name="ConvertOutputToDocument" line="176">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>https://chat.openai.com/c/5fe2049a-27e2-4668-abe9-b112ff600ced</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 18:55:20.039" level="INFO">Opening browser 'chrome' to base url 'https://chat.openai.com/c/5fe2049a-27e2-4668-abe9-b112ff600ced'.</msg>
+<status status="PASS" starttime="20240108 18:55:20.039" endtime="20240108 18:55:22.281"/>
+</kw>
+<status status="PASS" starttime="20240108 18:55:20.038" endtime="20240108 18:55:22.282"/>
+</test>
+<status status="PASS" starttime="20240108 18:55:19.890" endtime="20240108 18:55:22.283"/>
+</suite>
+<status status="PASS" starttime="20240108 18:55:19.880" endtime="20240108 18:55:22.283"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Siva">Siva</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Buzzworks">Siva.Buzzworks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

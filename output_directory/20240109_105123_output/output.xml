@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240109 10:51:23.150" rpa="false" schemaversion="4">
+<suite id="s1" name="Siva" source="/home/buzzadmin/robotframework/siva">
+<suite id="s1-s1" name="Buzzworks" source="/home/buzzadmin/robotframework/siva/buzzworks.robot">
+<test id="s1-s1-t1" name="Launch EPFO website" line="144">
+<try>
+<branch type="TRY">
+<kw name="Open EPF India Website">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>https://www.epfindia.gov.in/site_en/index.php#</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 10:51:23.534" level="INFO">Opening browser 'chrome' to base url 'https://www.epfindia.gov.in/site_en/index.php#'.</msg>
+<status status="PASS" starttime="20240109 10:51:23.531" endtime="20240109 10:51:26.561"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecr_panel_1"]</arg>
+<arg>timeout=30</arg>
+<arg>error=Unbale to launch EPF website..</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:26.562" endtime="20240109 10:51:26.604"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:23.531" endtime="20240109 10:51:26.604"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:23.531" endtime="20240109 10:51:26.604"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Close Browser" library="RPA.Browser.Selenium">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240109 10:51:26.605" endtime="20240109 10:51:26.605"/>
+</kw>
+<kw name="Open EPF India Website">
+<status status="NOT RUN" starttime="20240109 10:51:26.605" endtime="20240109 10:51:26.606"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 10:51:26.605" endtime="20240109 10:51:26.606"/>
+</branch>
+<status status="PASS" starttime="20240109 10:51:23.530" endtime="20240109 10:51:26.606"/>
+</try>
+<kw name="Open EPF India Website">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>https://www.epfindia.gov.in/site_en/index.php#</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 10:51:26.609" level="INFO">Opening browser 'chrome' to base url 'https://www.epfindia.gov.in/site_en/index.php#'.</msg>
+<status status="PASS" starttime="20240109 10:51:26.607" endtime="20240109 10:51:28.422"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecr_panel_1"]</arg>
+<arg>timeout=30</arg>
+<arg>error=Unbale to launch EPF website..</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:28.423" endtime="20240109 10:51:28.450"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:26.607" endtime="20240109 10:51:28.450"/>
+</kw>
+<kw name="Click ECR/Returns/Payment Button">
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecr_panel_1"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:28.451" level="INFO">Clicking element 'xpath://*[@id="ecr_panel_1"]'.</msg>
+<status status="PASS" starttime="20240109 10:51:28.451" endtime="20240109 10:51:28.513"/>
+</kw>
+<kw name="Switch Window" library="RPA.Browser.Selenium">
+<arg>EPFO: Home</arg>
+<arg>timeout=30s</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240109 10:51:28.513" endtime="20240109 10:51:30.085"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="btnCloseModal"]</arg>
+<arg>timeout=30s</arg>
+<arg>error= Unable to find Alert Popup..</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:30.086" endtime="20240109 10:51:30.117"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:28.451" endtime="20240109 10:51:30.117"/>
+</kw>
+<kw name="Accept Popup">
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="btnCloseModal"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:30.118" level="INFO">Clicking button 'xpath://*[@id="btnCloseModal"]'.</msg>
+<status status="PASS" starttime="20240109 10:51:30.118" endtime="20240109 10:51:30.178"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Opened EPFO login page</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:30.179" level="INFO">Opened EPFO login page</msg>
+<status status="PASS" starttime="20240109 10:51:30.179" endtime="20240109 10:51:30.179"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.117" endtime="20240109 10:51:30.179"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:23.530" endtime="20240109 10:51:30.180"/>
+</test>
+<test id="s1-s1-t2" name="Login EPFO Application" line="156">
+<kw name="Enter Username and Password">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="username"]</arg>
+<arg>timeout=30s</arg>
+<arg>error=Unable to find username input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:30.181" endtime="20240109 10:51:30.211"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="username"]</arg>
+<arg>${username}</arg>
+<arg>username button</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:30.212" level="INFO">Typing text 'BUZZWORKS2012' into text field 'xpath://*[@id="username"]'.</msg>
+<status status="PASS" starttime="20240109 10:51:30.212" endtime="20240109 10:51:30.298"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="password"]</arg>
+<arg>${password}</arg>
+<arg>password button</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:30.299" level="INFO">Typing text 'Bu$$2023Work$' into text field 'xpath://*[@id="password"]'.</msg>
+<status status="PASS" starttime="20240109 10:51:30.298" endtime="20240109 10:51:30.369"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Entered username and password</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:30.370" level="INFO">Entered username and password</msg>
+<status status="PASS" starttime="20240109 10:51:30.369" endtime="20240109 10:51:30.370"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.180" endtime="20240109 10:51:30.370"/>
+</kw>
+<kw name="Click Signin Button">
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>//button[@class='btn btn-success btn-logging']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:30.371" level="INFO">Clicking button '//button[@class='btn btn-success btn-logging']'.</msg>
+<status status="PASS" starttime="20240109 10:51:30.370" endtime="20240109 10:51:30.718"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[contains(@class, 'dropdown-toggle') and contains(text(), 'Payment')]</arg>
+<arg>timeout=30s</arg>
+<arg>error=Unable to login EPFO</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:30.719" endtime="20240109 10:51:30.743"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.719" endtime="20240109 10:51:30.744"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>message</pattern>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>//*[@id="digitalJeevanAlertBox"]//*[@id="alertButtton"]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 10:51:30.744" endtime="20240109 10:51:30.744"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[contains(@class, 'dropdown-toggle') and contains(text(), 'Payment')]</arg>
+<arg>timeout=30s</arg>
+<arg>error=Unable to login EPFO</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240109 10:51:30.744" endtime="20240109 10:51:30.744"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 10:51:30.744" endtime="20240109 10:51:30.744"/>
+</branch>
+<status status="PASS" starttime="20240109 10:51:30.718" endtime="20240109 10:51:30.744"/>
+</try>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logging EPFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:30.745" level="INFO">Successfully logging EPFO</msg>
+<status status="PASS" starttime="20240109 10:51:30.744" endtime="20240109 10:51:30.745"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.370" endtime="20240109 10:51:30.745"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.180" endtime="20240109 10:51:30.745"/>
+</test>
+<test id="s1-s1-t3" name="Go to ECR upload page" line="159">
+<kw name="Click Payments Menu">
+<kw name="Click Element When Visible">
+<arg>//*[contains(@class, 'dropdown-toggle') and contains(text(), 'Payment')]</arg>
+<arg>Payment Menu</arg>
+<arg>//ul[@class='dropdown-menu m1']//a[text()='ECR/RETURN FILING']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:30.746" endtime="20240109 10:51:30.765"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:30.766" level="INFO">Clicking element '//*[contains(@class, 'dropdown-toggle') and contains(text(), 'Payment')]'.</msg>
+<status status="PASS" starttime="20240109 10:51:30.765" endtime="20240109 10:51:30.801"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:30.802" endtime="20240109 10:51:30.819"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:30.819" level="INFO">Successfully Clicked on Payment Menu</msg>
+<status status="PASS" starttime="20240109 10:51:30.819" endtime="20240109 10:51:30.819"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.746" endtime="20240109 10:51:30.820"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.746" endtime="20240109 10:51:30.820"/>
+</kw>
+<kw name="Click ECR/RETURN FILE Menu Item">
+<kw name="Click Element When Visible">
+<arg>//ul[@class='dropdown-menu m1']//a[text()='ECR/RETURN FILING']</arg>
+<arg>ECR/RETURN FILE Menu Item</arg>
+<arg>//tr[@class='row1 trs']//a[text()='ECR Upload']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:30.821" endtime="20240109 10:51:30.833"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:30.834" level="INFO">Clicking element '//ul[@class='dropdown-menu m1']//a[text()='ECR/RETURN FILING']'.</msg>
+<status status="PASS" starttime="20240109 10:51:30.833" endtime="20240109 10:51:31.454"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:31.455" endtime="20240109 10:51:31.499"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:31.500" level="INFO">Successfully Clicked on ECR/RETURN FILE Menu Item</msg>
+<status status="PASS" starttime="20240109 10:51:31.499" endtime="20240109 10:51:31.500"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.820" endtime="20240109 10:51:31.500"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.820" endtime="20240109 10:51:31.500"/>
+</kw>
+<kw name="Click ECR Upload Hyperlink">
+<kw name="Click Element When Visible">
+<arg>//tr[@class='row1 trs']//a[text()='ECR Upload']</arg>
+<arg>ECR Upload Hyperlink</arg>
+<arg>//*[@id="ui-id-3"]</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:31.502" endtime="20240109 10:51:31.521"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:31.523" level="INFO">Clicking element '//tr[@class='row1 trs']//a[text()='ECR Upload']'.</msg>
+<status status="PASS" starttime="20240109 10:51:31.522" endtime="20240109 10:51:33.630"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:33.631" endtime="20240109 10:51:33.667"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:33.668" level="INFO">Successfully Clicked on ECR Upload Hyperlink</msg>
+<status status="PASS" starttime="20240109 10:51:33.668" endtime="20240109 10:51:33.668"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:31.501" endtime="20240109 10:51:33.668"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:31.501" endtime="20240109 10:51:33.668"/>
+</kw>
+<kw name=" Click ECR file upload Button">
+<kw name="Click Element When Visible">
+<arg>//*[@id="ui-id-3"]</arg>
+<arg>ECR file upload Button</arg>
+<arg>//input[@id='wageMonth']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:33.669" endtime="20240109 10:51:33.694"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:33.695" level="INFO">Clicking element '//*[@id="ui-id-3"]'.</msg>
+<status status="PASS" starttime="20240109 10:51:33.694" endtime="20240109 10:51:33.732"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:33.732" endtime="20240109 10:51:33.998"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:33.999" level="INFO">Successfully Clicked on ECR file upload Button</msg>
+<status status="PASS" starttime="20240109 10:51:33.999" endtime="20240109 10:51:33.999"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:33.669" endtime="20240109 10:51:33.999"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:33.669" endtime="20240109 10:51:33.999"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:30.745" endtime="20240109 10:51:34.000"/>
+</test>
+<test id="s1-s1-t4" name="Data of ECR Fileupload" line="164">
+<kw name="Click WageMonth Button">
+<kw name="Click Element When Visible">
+<arg>//input[@id='wageMonth']</arg>
+<arg>Month Button</arg>
+<arg>//*[@id="ui-datepicker-div"]/div[2]/button[1]</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.001" endtime="20240109 10:51:34.028"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:34.029" level="INFO">Clicking element '//input[@id='wageMonth']'.</msg>
+<status status="PASS" starttime="20240109 10:51:34.029" endtime="20240109 10:51:34.094"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.094" endtime="20240109 10:51:34.118"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:34.118" level="INFO">Successfully Clicked on Month Button</msg>
+<status status="PASS" starttime="20240109 10:51:34.118" endtime="20240109 10:51:34.118"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:34.001" endtime="20240109 10:51:34.118"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//*[@id="ui-datepicker-div"]/div[2]/button[1]</arg>
+<arg>Declaration of month</arg>
+<arg>//Div/button[contains(text(), 'Done')]</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.119" endtime="20240109 10:51:34.137"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:34.138" level="INFO">Clicking element '//*[@id="ui-datepicker-div"]/div[2]/button[1]'.</msg>
+<status status="PASS" starttime="20240109 10:51:34.137" endtime="20240109 10:51:34.183"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.183" endtime="20240109 10:51:34.201"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:34.201" level="INFO">Successfully Clicked on Declaration of month</msg>
+<status status="PASS" starttime="20240109 10:51:34.201" endtime="20240109 10:51:34.201"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:34.118" endtime="20240109 10:51:34.202"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//Div//button[contains(text(), 'Done')]</arg>
+<arg>Done</arg>
+<arg>//input[@id='salaryDate']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.202" endtime="20240109 10:51:34.219"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:34.220" level="INFO">Clicking element '//Div//button[contains(text(), 'Done')]'.</msg>
+<status status="PASS" starttime="20240109 10:51:34.219" endtime="20240109 10:51:34.261"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.261" endtime="20240109 10:51:34.278"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:34.279" level="INFO">Successfully Clicked on Done</msg>
+<status status="PASS" starttime="20240109 10:51:34.278" endtime="20240109 10:51:34.279"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:34.202" endtime="20240109 10:51:34.279"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//input[@id='salaryDate']</arg>
+<arg>Salary Dispursal</arg>
+<arg>//*[@id="ui-datepicker-div"]/table/tbody/tr[1]/td[2]/a</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.279" endtime="20240109 10:51:34.293"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:34.294" level="INFO">Clicking element '//input[@id='salaryDate']'.</msg>
+<status status="PASS" starttime="20240109 10:51:34.294" endtime="20240109 10:51:34.334"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.335" endtime="20240109 10:51:34.590"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:34.592" level="INFO">Successfully Clicked on Salary Dispursal</msg>
+<status status="PASS" starttime="20240109 10:51:34.590" endtime="20240109 10:51:34.592"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:34.279" endtime="20240109 10:51:34.592"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//*[@id="ui-datepicker-div"]/table/tbody/tr[1]/td[2]/a</arg>
+<arg>Date of salary Dispursal</arg>
+<arg>ecrFileType</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.594" endtime="20240109 10:51:34.626"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:34.627" level="INFO">Clicking element '//*[@id="ui-datepicker-div"]/table/tbody/tr[1]/td[2]/a'.</msg>
+<status status="PASS" starttime="20240109 10:51:34.626" endtime="20240109 10:51:34.702"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:34.702" endtime="20240109 10:51:34.730"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:34.731" level="INFO">Successfully Clicked on Date of salary Dispursal</msg>
+<status status="PASS" starttime="20240109 10:51:34.731" endtime="20240109 10:51:34.731"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:34.593" endtime="20240109 10:51:34.731"/>
+</kw>
+<kw name="Select Radio Button" library="RPA.Browser.Selenium">
+<arg>ecrFileType</arg>
+<arg>E</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20240109 10:51:34.731" level="INFO">Selecting 'E' from radio button 'ecrFileType'.</msg>
+<status status="PASS" starttime="20240109 10:51:34.731" endtime="20240109 10:51:34.779"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecrFileUploadRemarks"]</arg>
+<arg>ok</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:34.780" level="INFO">Typing text 'ok' into text field 'xpath://*[@id="ecrFileUploadRemarks"]'.</msg>
+<status status="PASS" starttime="20240109 10:51:34.780" endtime="20240109 10:51:34.833"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<var>${result}</var>
+<arg>excel_to_csv.excel_to_text</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Excel To Text" library="excel_to_csv">
+<msg timestamp="20240109 10:51:35.042" level="INFO">Conversion to text file done successfully.</msg>
+<status status="PASS" starttime="20240109 10:51:34.834" endtime="20240109 10:51:35.042"/>
+</kw>
+<msg timestamp="20240109 10:51:35.043" level="INFO">${result} = /home/buzzadmin/Downloads/EPF_Regular_ECR.txt</msg>
+<status status="PASS" starttime="20240109 10:51:34.834" endtime="20240109 10:51:35.043"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:35.043" level="INFO">/home/buzzadmin/Downloads/EPF_Regular_ECR.txt</msg>
+<status status="PASS" starttime="20240109 10:51:35.043" endtime="20240109 10:51:35.043"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 10:51:45.044" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240109 10:51:35.043" endtime="20240109 10:51:45.044"/>
+</kw>
+<kw name="Choose File" library="RPA.Browser.Selenium">
+<arg>//*[@id="multiFile"]</arg>
+<arg>${result}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20240109 10:51:45.046" level="INFO">Sending /home/buzzadmin/Downloads/EPF_Regular_ECR.txt to browser.</msg>
+<status status="PASS" starttime="20240109 10:51:45.045" endtime="20240109 10:51:45.080"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[@id="btnUploadECRFile"]</arg>
+<arg>timeout=30s</arg>
+<arg>error=unable to find Upload button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:45.081" endtime="20240109 10:51:45.099"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//*[@id="btnUploadECRFile"]</arg>
+<arg>upload</arg>
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:45.100" endtime="20240109 10:51:45.111"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:45.112" level="INFO">Clicking element '//*[@id="btnUploadECRFile"]'.</msg>
+<status status="PASS" starttime="20240109 10:51:45.112" endtime="20240109 10:51:52.579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:52.580" endtime="20240109 10:51:52.617"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:51:52.618" level="INFO">Successfully Clicked on upload</msg>
+<status status="PASS" starttime="20240109 10:51:52.617" endtime="20240109 10:51:52.618"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:45.099" endtime="20240109 10:51:52.618"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<arg>timeout=30s</arg>
+<arg>error= unable to find Success message</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:51:52.618" endtime="20240109 10:51:52.633"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:34.001" endtime="20240109 10:51:52.634"/>
+</kw>
+<status status="PASS" starttime="20240109 10:51:34.000" endtime="20240109 10:51:52.634"/>
+</test>
+<test id="s1-s1-t5" name="ECR File Verification" line="166">
+<kw name="Validate and Wait for Appear Verify">
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${actual_message}</var>
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:51:52.657" level="INFO">${actual_message} = File Validation Successfull. File Processing is in progress and may take more time. Please revisit after some time.</msg>
+<status status="PASS" starttime="20240109 10:51:52.635" endtime="20240109 10:51:52.657"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_message == $Expected_Message">
+<while condition="$Counter &gt; $Retry_Limit">
+<iter>
+<try>
+<branch type="TRY">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[@id="tbClaimList"]//tbody/tr[1]/td[12]/a[contains(text(), 'Verify')]</arg>
+<arg>timeout=30s</arg>
+<arg>error=not found</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240109 10:51:52.659" endtime="20240109 10:51:52.659"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 10:51:52.659" endtime="20240109 10:51:52.659"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Sleep" library="BuiltIn">
+<arg>30</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 10:51:52.659" endtime="20240109 10:51:52.659"/>
+</kw>
+<kw name="${Counter}= ${Counter} + 1">
+<status status="NOT RUN" starttime="20240109 10:51:52.664" endtime="20240109 10:51:52.664"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240109 10:51:52.664" endtime="20240109 10:51:52.664"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 10:51:52.659" endtime="20240109 10:51:52.664"/>
+</branch>
+<status status="NOT RUN" starttime="20240109 10:51:52.659" endtime="20240109 10:51:52.664"/>
+</try>
+<status status="NOT RUN" starttime="20240109 10:51:52.658" endtime="20240109 10:51:52.664"/>
+</iter>
+<status status="NOT RUN" starttime="20240109 10:51:52.658" endtime="20240109 10:51:52.664"/>
+</while>
+<msg timestamp="20240109 10:51:52.664" level="FAIL">Invalid IF condition: Evaluating expression '$actual_message == $Expected_Message' failed: Variable '$Expected_Message' not found.</msg>
+<status status="FAIL" starttime="20240109 10:51:52.657" endtime="20240109 10:51:52.664"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>120</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 10:51:52.664" endtime="20240109 10:51:52.665"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 10:51:52.664" endtime="20240109 10:51:52.665"/>
+</branch>
+<status status="FAIL" starttime="20240109 10:51:52.657" endtime="20240109 10:51:52.665"/>
+</if>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>//*[@id="tbClaimList"]//tbody/tr[1]/td[12]/a[contains(text(), 'Verify')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 10:51:52.665" endtime="20240109 10:51:52.665"/>
+</kw>
+<kw name="Handle Alert" library="RPA.Browser.Selenium">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" starttime="20240109 10:51:52.665" endtime="20240109 10:51:52.665"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:51:52.634" endtime="20240109 10:51:52.665"/>
+</kw>
+<kw name="Download ECR File">
+<status status="NOT RUN" starttime="20240109 10:51:52.665" endtime="20240109 10:51:52.665"/>
+</kw>
+<kw name="Download ECR Statement">
+<status status="NOT RUN" starttime="20240109 10:51:52.665" endtime="20240109 10:51:52.665"/>
+</kw>
+<kw name="Generate TRRN Number and Click Prepare Challan Button">
+<status status="NOT RUN" starttime="20240109 10:51:52.666" endtime="20240109 10:51:52.666"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:51:52.634" endtime="20240109 10:51:52.666">Invalid IF condition: Evaluating expression '$actual_message == $Expected_Message' failed: Variable '$Expected_Message' not found.</status>
+</test>
+<status status="FAIL" starttime="20240109 10:51:23.161" endtime="20240109 10:51:52.666"/>
+</suite>
+<status status="FAIL" starttime="20240109 10:51:23.150" endtime="20240109 10:51:52.667"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="1" skip="0" id="s1" name="Siva">Siva</stat>
+<stat pass="4" fail="1" skip="0" id="s1-s1" name="Buzzworks">Siva.Buzzworks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240109 10:51:23.527" level="ERROR">Error in file '/home/buzzadmin/robotframework/siva/buzzworks.robot' on line 18: Setting variable '${DOWNLOAD_FOLDER}' failed: Environment variable '%{FileDownloadPAth}' not found. Did you mean:
+    %{DOWNLOAD_PATH}</msg>
+<msg timestamp="20240109 10:51:23.528" level="ERROR">Error in file '/home/buzzadmin/robotframework/siva/buzzworks.robot' on line 15: Setting variable '${Expected_Message}' failed: Environment variable '%{Fileupload_Status}' not found.</msg>
+<msg timestamp="20240109 10:51:23.528" level="ERROR">Error in file '/home/buzzadmin/robotframework/siva/buzzworks.robot' on line 19: Setting variable '${Input_Path}' failed: Environment variable '%{Input_Filepath}' not found.</msg>
+<msg timestamp="20240109 10:51:23.529" level="ERROR">Error in file '/home/buzzadmin/robotframework/siva/buzzworks.robot' on line 28: Setting variable '${xpected_Message}' failed: Environment variable '%{Fileupload_Status}' not found.</msg>
+<msg timestamp="20240109 10:51:23.530" level="WARN">Failed to load input work item: 'Missing required environment variable: RC_WORKSPACE_ID'</msg>
+</errors>
+</robot>

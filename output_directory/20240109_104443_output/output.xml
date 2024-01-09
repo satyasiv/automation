@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240109 10:44:43.875" rpa="false" schemaversion="4">
+<suite id="s1" name="Siva" source="/home/buzzadmin/robotframework/siva">
+<suite id="s1-s1" name="Buzzworks" source="/home/buzzadmin/robotframework/siva/buzzworks.robot">
+<test id="s1-s1-t1" name="Launch EPFO website" line="144">
+<try>
+<branch type="TRY">
+<kw name="Open EPF India Website">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>https://www.epfindia.gov.in/site_en/index.php#</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 10:44:44.266" level="INFO">Opening browser 'chrome' to base url 'https://www.epfindia.gov.in/site_en/index.php#'.</msg>
+<status status="PASS" starttime="20240109 10:44:44.263" endtime="20240109 10:44:46.876"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecr_panel_1"]</arg>
+<arg>timeout=30</arg>
+<arg>error=Unbale to launch EPF website..</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:44:46.877" endtime="20240109 10:44:46.931"/>
+</kw>
+<status status="PASS" starttime="20240109 10:44:44.263" endtime="20240109 10:44:46.932"/>
+</kw>
+<status status="PASS" starttime="20240109 10:44:44.263" endtime="20240109 10:44:46.932"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Close Browser" library="RPA.Browser.Selenium">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:46.932" endtime="20240109 10:44:46.932"/>
+</kw>
+<kw name="Open EPF India Website">
+<status status="NOT RUN" starttime="20240109 10:44:46.933" endtime="20240109 10:44:46.933"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 10:44:46.932" endtime="20240109 10:44:46.933"/>
+</branch>
+<status status="PASS" starttime="20240109 10:44:44.263" endtime="20240109 10:44:46.933"/>
+</try>
+<kw name="Open EPF India Website">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>https://www.epfindia.gov.in/site_en/index.php#</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 10:44:46.936" level="INFO">Opening browser 'chrome' to base url 'https://www.epfindia.gov.in/site_en/index.php#'.</msg>
+<status status="PASS" starttime="20240109 10:44:46.934" endtime="20240109 10:44:48.828"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecr_panel_1"]</arg>
+<arg>timeout=30</arg>
+<arg>error=Unbale to launch EPF website..</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:44:48.829" endtime="20240109 10:44:48.859"/>
+</kw>
+<status status="PASS" starttime="20240109 10:44:46.933" endtime="20240109 10:44:48.859"/>
+</kw>
+<kw name="Click ECR/Returns/Payment Button">
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecr_panel_1"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:44:48.860" level="INFO">Clicking element 'xpath://*[@id="ecr_panel_1"]'.</msg>
+<status status="PASS" starttime="20240109 10:44:48.860" endtime="20240109 10:44:48.923"/>
+</kw>
+<kw name="Switch Window" library="RPA.Browser.Selenium">
+<arg>EPFO: Home</arg>
+<arg>timeout=30s</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240109 10:44:48.923" endtime="20240109 10:44:49.981"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="btnCloseModal"]</arg>
+<arg>timeout=30s</arg>
+<arg>error= Unable to find Alert Popup..</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 10:44:49.981" endtime="20240109 10:44:50.064"/>
+</kw>
+<status status="PASS" starttime="20240109 10:44:48.859" endtime="20240109 10:44:50.064"/>
+</kw>
+<kw name="Accept Popup">
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="btnCloseModal"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240109 10:44:50.067" level="INFO">Clicking button 'xpath://*[@id="btnCloseModal"]'.</msg>
+<status status="PASS" starttime="20240109 10:44:50.066" endtime="20240109 10:44:50.152"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Opened EPFO login page</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 10:44:50.153" level="INFO">Opened EPFO login page</msg>
+<status status="PASS" starttime="20240109 10:44:50.153" endtime="20240109 10:44:50.153"/>
+</kw>
+<status status="PASS" starttime="20240109 10:44:50.065" endtime="20240109 10:44:50.153"/>
+</kw>
+<status status="PASS" starttime="20240109 10:44:44.262" endtime="20240109 10:44:50.153"/>
+</test>
+<test id="s1-s1-t2" name="Login EPFO Application" line="156">
+<kw name="Enter Username and Password">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="username"]</arg>
+<arg>timeout=30s</arg>
+<arg>error=Unable to find username input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240109 10:44:50.161" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<msg timestamp="20240109 10:44:50.162" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<status status="FAIL" starttime="20240109 10:44:50.154" endtime="20240109 10:44:50.175"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="username"]</arg>
+<arg>${username}</arg>
+<arg>username button</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.175" endtime="20240109 10:44:50.175"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="password"]</arg>
+<arg>${password}</arg>
+<arg>password button</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.176" endtime="20240109 10:44:50.176"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Entered username and password</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.176" endtime="20240109 10:44:50.176"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.154" endtime="20240109 10:44:50.176"/>
+</kw>
+<kw name="Click Signin Button">
+<status status="NOT RUN" starttime="20240109 10:44:50.177" endtime="20240109 10:44:50.177"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.154" endtime="20240109 10:44:50.178">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</status>
+</test>
+<test id="s1-s1-t3" name="Go to ECR upload page" line="159">
+<kw name="Click Payments Menu">
+<kw name="Click Element When Visible">
+<arg>//*[contains(@class, 'dropdown-toggle') and contains(text(), 'Payment')]</arg>
+<arg>Payment Menu</arg>
+<arg>//ul[@class='dropdown-menu m1']//a[text()='ECR/RETURN FILING']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240109 10:44:50.195" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<msg timestamp="20240109 10:44:50.195" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<status status="FAIL" starttime="20240109 10:44:50.181" endtime="20240109 10:44:50.195"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.195" endtime="20240109 10:44:50.195"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.195" endtime="20240109 10:44:50.195"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.195" endtime="20240109 10:44:50.196"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.180" endtime="20240109 10:44:50.196"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.180" endtime="20240109 10:44:50.196"/>
+</kw>
+<kw name="Click ECR/RETURN FILE Menu Item">
+<status status="NOT RUN" starttime="20240109 10:44:50.196" endtime="20240109 10:44:50.196"/>
+</kw>
+<kw name="Click ECR Upload Hyperlink">
+<status status="NOT RUN" starttime="20240109 10:44:50.196" endtime="20240109 10:44:50.196"/>
+</kw>
+<kw name=" Click ECR file upload Button">
+<status status="NOT RUN" starttime="20240109 10:44:50.196" endtime="20240109 10:44:50.196"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.179" endtime="20240109 10:44:50.196">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</status>
+</test>
+<test id="s1-s1-t4" name="Data of ECR Fileupload" line="164">
+<kw name="Click WageMonth Button">
+<kw name="Click Element When Visible">
+<arg>//input[@id='wageMonth']</arg>
+<arg>Month Button</arg>
+<arg>//*[@id="ui-datepicker-div"]/div[2]/button[1]</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240109 10:44:50.209" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<msg timestamp="20240109 10:44:50.210" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<status status="FAIL" starttime="20240109 10:44:50.198" endtime="20240109 10:44:50.210"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.210" endtime="20240109 10:44:50.210"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.211" endtime="20240109 10:44:50.211"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.211" endtime="20240109 10:44:50.211"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.197" endtime="20240109 10:44:50.211"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//*[@id="ui-datepicker-div"]/div[2]/button[1]</arg>
+<arg>Declaration of month</arg>
+<arg>//Div/button[contains(text(), 'Done')]</arg>
+<status status="NOT RUN" starttime="20240109 10:44:50.211" endtime="20240109 10:44:50.211"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//Div//button[contains(text(), 'Done')]</arg>
+<arg>Done</arg>
+<arg>//input[@id='salaryDate']</arg>
+<status status="NOT RUN" starttime="20240109 10:44:50.211" endtime="20240109 10:44:50.211"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//input[@id='salaryDate']</arg>
+<arg>Salary Dispursal</arg>
+<arg>//*[@id="ui-datepicker-div"]/table/tbody/tr[1]/td[2]/a</arg>
+<status status="NOT RUN" starttime="20240109 10:44:50.211" endtime="20240109 10:44:50.212"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//*[@id="ui-datepicker-div"]/table/tbody/tr[1]/td[2]/a</arg>
+<arg>Date of salary Dispursal</arg>
+<arg>ecrFileType</arg>
+<status status="NOT RUN" starttime="20240109 10:44:50.212" endtime="20240109 10:44:50.212"/>
+</kw>
+<kw name="Select Radio Button" library="RPA.Browser.Selenium">
+<arg>ecrFileType</arg>
+<arg>E</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.212" endtime="20240109 10:44:50.212"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecrFileUploadRemarks"]</arg>
+<arg>ok</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.212" endtime="20240109 10:44:50.212"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<var>${result}</var>
+<arg>excel_to_csv.excel_to_text</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.212" endtime="20240109 10:44:50.212"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.212" endtime="20240109 10:44:50.212"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.212" endtime="20240109 10:44:50.212"/>
+</kw>
+<kw name="Choose File" library="RPA.Browser.Selenium">
+<arg>//*[@id="multiFile"]</arg>
+<arg>${result}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.213" endtime="20240109 10:44:50.213"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[@id="btnUploadECRFile"]</arg>
+<arg>timeout=30s</arg>
+<arg>error=unable to find Upload button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.213" endtime="20240109 10:44:50.213"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//*[@id="btnUploadECRFile"]</arg>
+<arg>upload</arg>
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<status status="NOT RUN" starttime="20240109 10:44:50.213" endtime="20240109 10:44:50.213"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<arg>timeout=30s</arg>
+<arg>error= unable to find Success message</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.213" endtime="20240109 10:44:50.213"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.197" endtime="20240109 10:44:50.213"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.197" endtime="20240109 10:44:50.213">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</status>
+</test>
+<test id="s1-s1-t5" name="ECR File Verification" line="166">
+<kw name="Validate and Wait for Appear Verify">
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${actual_message}</var>
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:44:50.225" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<msg timestamp="20240109 10:44:50.225" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<status status="FAIL" starttime="20240109 10:44:50.214" endtime="20240109 10:44:50.227"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_message == $Expected_Message">
+<while condition="$Counter &gt; $Retry_Limit">
+<iter>
+<try>
+<branch type="TRY">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[@id="tbClaimList"]//tbody/tr[1]/td[12]/a[contains(text(), 'Verify')]</arg>
+<arg>timeout=30s</arg>
+<arg>error=not found</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.228" endtime="20240109 10:44:50.228"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 10:44:50.227" endtime="20240109 10:44:50.228"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Sleep" library="BuiltIn">
+<arg>30</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.228" endtime="20240109 10:44:50.228"/>
+</kw>
+<kw name="${Counter}= ${Counter} + 1">
+<status status="NOT RUN" starttime="20240109 10:44:50.238" endtime="20240109 10:44:50.239"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.239" endtime="20240109 10:44:50.240"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 10:44:50.228" endtime="20240109 10:44:50.241"/>
+</branch>
+<status status="NOT RUN" starttime="20240109 10:44:50.227" endtime="20240109 10:44:50.243"/>
+</try>
+<status status="NOT RUN" starttime="20240109 10:44:50.227" endtime="20240109 10:44:50.243"/>
+</iter>
+<status status="NOT RUN" starttime="20240109 10:44:50.227" endtime="20240109 10:44:50.243"/>
+</while>
+<status status="NOT RUN" starttime="20240109 10:44:50.227" endtime="20240109 10:44:50.248"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>120</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.248" endtime="20240109 10:44:50.248"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 10:44:50.248" endtime="20240109 10:44:50.248"/>
+</branch>
+<status status="NOT RUN" starttime="20240109 10:44:50.227" endtime="20240109 10:44:50.248"/>
+</if>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>//*[@id="tbClaimList"]//tbody/tr[1]/td[12]/a[contains(text(), 'Verify')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.248" endtime="20240109 10:44:50.248"/>
+</kw>
+<kw name="Handle Alert" library="RPA.Browser.Selenium">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" starttime="20240109 10:44:50.248" endtime="20240109 10:44:50.248"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.214" endtime="20240109 10:44:50.248"/>
+</kw>
+<kw name="Download ECR File">
+<status status="NOT RUN" starttime="20240109 10:44:50.249" endtime="20240109 10:44:50.249"/>
+</kw>
+<kw name="Download ECR Statement">
+<status status="NOT RUN" starttime="20240109 10:44:50.249" endtime="20240109 10:44:50.249"/>
+</kw>
+<kw name="Generate TRRN Number and Click Prepare Challan Button">
+<status status="NOT RUN" starttime="20240109 10:44:50.249" endtime="20240109 10:44:50.249"/>
+</kw>
+<status status="FAIL" starttime="20240109 10:44:50.214" endtime="20240109 10:44:50.250">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240109 10:44:43.886" endtime="20240109 10:44:50.255"/>
+</suite>
+<status status="FAIL" starttime="20240109 10:44:43.876" endtime="20240109 10:44:50.261"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="4" skip="0" id="s1" name="Siva">Siva</stat>
+<stat pass="1" fail="4" skip="0" id="s1-s1" name="Buzzworks">Siva.Buzzworks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240109 10:44:44.260" level="ERROR">Error in file '/home/buzzadmin/robotframework/siva/buzzworks.robot' on line 18: Setting variable '${DOWNLOAD_FOLDER}' failed: Environment variable '%{FileDownloadPAth}' not found. Did you mean:
+    %{DOWNLOAD_PATH}</msg>
+<msg timestamp="20240109 10:44:44.260" level="ERROR">Error in file '/home/buzzadmin/robotframework/siva/buzzworks.robot' on line 15: Setting variable '${Expected_Message}' failed: Environment variable '%{Fileupload_Status}' not found.</msg>
+<msg timestamp="20240109 10:44:44.261" level="ERROR">Error in file '/home/buzzadmin/robotframework/siva/buzzworks.robot' on line 19: Setting variable '${Input_Path}' failed: Environment variable '%{Input_Filepath}' not found.</msg>
+<msg timestamp="20240109 10:44:44.262" level="ERROR">Error in file '/home/buzzadmin/robotframework/siva/buzzworks.robot' on line 28: Setting variable '${xpected_Message}' failed: Environment variable '%{Fileupload_Status}' not found.</msg>
+<msg timestamp="20240109 10:44:44.262" level="WARN">Failed to load input work item: 'Missing required environment variable: RC_WORKSPACE_ID'</msg>
+<msg timestamp="20240109 10:44:50.161" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<msg timestamp="20240109 10:44:50.195" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<msg timestamp="20240109 10:44:50.209" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+<msg timestamp="20240109 10:44:50.225" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.159)
+Stacktrace:
+#0 0x5617a46035e3 &lt;unknown&gt;
+#1 0x5617a42c60b7 &lt;unknown&gt;
+#2 0x5617a429a1b8 &lt;unknown&gt;
+#3 0x5617a43406ef &lt;unknown&gt;
+#4 0x5617a4356306 &lt;unknown&gt;
+#5 0x5617a433acc3 &lt;unknown&gt;
+#6 0x5617a43060e4 &lt;unknown&gt;
+#7 0x5617a43070ae &lt;unknown&gt;
+#8 0x5617a45c9ce1 &lt;unknown&gt;
+#9 0x5617a45cdb7e &lt;unknown&gt;
+#10 0x5617a45b74b5 &lt;unknown&gt;
+#11 0x5617a45ce7d6 &lt;unknown&gt;
+#12 0x5617a459adbf &lt;unknown&gt;
+#13 0x5617a45f1748 &lt;unknown&gt;
+#14 0x5617a45f1917 &lt;unknown&gt;
+#15 0x5617a4602773 &lt;unknown&gt;
+#16 0x7f4d645cc609 start_thread
+</msg>
+</errors>
+</robot>

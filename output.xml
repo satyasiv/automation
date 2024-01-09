@@ -1,0 +1,2920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.12 on linux)" generated="20240109 16:50:22.926" rpa="false" schemaversion="4">
+<suite id="s1" name="Buzzworks" source="/home/buzzadmin/robotframework/siva/buzzworks.robot">
+<test id="s1-t1" name="Launch EPFO website" line="146">
+<try>
+<branch type="TRY">
+<kw name="Open EPF India Website">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>https://www.epfindia.gov.in/site_en/index.php#</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 16:50:24.619" level="INFO">Opening browser 'chrome' to base url 'https://www.epfindia.gov.in/site_en/index.php#'.</msg>
+<status status="PASS" starttime="20240109 16:50:24.593" endtime="20240109 16:50:27.089"/>
+</kw>
+<kw name="Maximize Browser Window" library="RPA.Browser.Selenium">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240109 16:50:27.091" endtime="20240109 16:50:27.250"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecr_panel_1"]</arg>
+<arg>timeout=30</arg>
+<arg>error=Unbale to launch EPF website..</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:27.251" endtime="20240109 16:50:27.406"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:24.591" endtime="20240109 16:50:27.407"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:24.590" endtime="20240109 16:50:27.408"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Close Browser" library="RPA.Browser.Selenium">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240109 16:50:27.410" endtime="20240109 16:50:27.411"/>
+</kw>
+<kw name="Open EPF India Website">
+<status status="NOT RUN" starttime="20240109 16:50:27.417" endtime="20240109 16:50:27.421"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 16:50:27.408" endtime="20240109 16:50:27.422"/>
+</branch>
+<status status="PASS" starttime="20240109 16:50:24.590" endtime="20240109 16:50:27.423"/>
+</try>
+<kw name="Open EPF India Website">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>https://www.epfindia.gov.in/site_en/index.php#</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 16:50:27.439" level="INFO">Opening browser 'chrome' to base url 'https://www.epfindia.gov.in/site_en/index.php#'.</msg>
+<status status="PASS" starttime="20240109 16:50:27.428" endtime="20240109 16:50:29.927"/>
+</kw>
+<kw name="Maximize Browser Window" library="RPA.Browser.Selenium">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240109 16:50:29.932" endtime="20240109 16:50:30.073"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecr_panel_1"]</arg>
+<arg>timeout=30</arg>
+<arg>error=Unbale to launch EPF website..</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:30.074" endtime="20240109 16:50:30.182"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:27.427" endtime="20240109 16:50:30.184"/>
+</kw>
+<kw name="Click ECR/Returns/Payment Button">
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecr_panel_1"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:30.219" level="INFO">Clicking element 'xpath://*[@id="ecr_panel_1"]'.</msg>
+<status status="PASS" starttime="20240109 16:50:30.194" endtime="20240109 16:50:30.351"/>
+</kw>
+<kw name="Switch Window" library="RPA.Browser.Selenium">
+<arg>EPFO: Home</arg>
+<arg>timeout=30s</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240109 16:50:30.353" endtime="20240109 16:50:31.785"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="btnCloseModal"]</arg>
+<arg>timeout=30s</arg>
+<arg>error= Unable to find Alert Popup..</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:31.786" endtime="20240109 16:50:31.829"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:30.191" endtime="20240109 16:50:31.833"/>
+</kw>
+<kw name="Accept Popup">
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="btnCloseModal"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:31.845" level="INFO">Clicking button 'xpath://*[@id="btnCloseModal"]'.</msg>
+<status status="PASS" starttime="20240109 16:50:31.841" endtime="20240109 16:50:31.925"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Opened EPFO login page</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:31.927" level="INFO">Opened EPFO login page</msg>
+<status status="PASS" starttime="20240109 16:50:31.926" endtime="20240109 16:50:31.927"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:31.838" endtime="20240109 16:50:31.927"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:24.587" endtime="20240109 16:50:31.929"/>
+</test>
+<test id="s1-t2" name="Login EPFO Application" line="158">
+<kw name="Enter Username and Password">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="username"]</arg>
+<arg>timeout=30s</arg>
+<arg>error=Unable to find username input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:31.952" endtime="20240109 16:50:32.020"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="username"]</arg>
+<arg>${username}</arg>
+<arg>username button</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:32.023" level="INFO">Typing text 'BUZZWORKS2012' into text field 'xpath://*[@id="username"]'.</msg>
+<status status="PASS" starttime="20240109 16:50:32.021" endtime="20240109 16:50:32.143"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="password"]</arg>
+<arg>${password}</arg>
+<arg>password button</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:32.147" level="INFO">Typing text 'Bu$$2023Work$' into text field 'xpath://*[@id="password"]'.</msg>
+<status status="PASS" starttime="20240109 16:50:32.144" endtime="20240109 16:50:32.258"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Entered username and password</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:32.259" level="INFO">Entered username and password</msg>
+<status status="PASS" starttime="20240109 16:50:32.258" endtime="20240109 16:50:32.259"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:31.940" endtime="20240109 16:50:32.260"/>
+</kw>
+<kw name="Click Signin Button">
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>//button[@class='btn btn-success btn-logging']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:32.277" level="INFO">Clicking button '//button[@class='btn btn-success btn-logging']'.</msg>
+<status status="PASS" starttime="20240109 16:50:32.266" endtime="20240109 16:50:32.672"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[contains(@class, 'dropdown-toggle') and contains(text(), 'Payment')]</arg>
+<arg>timeout=30s</arg>
+<arg>error=Unable to login EPFO</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:32.673" endtime="20240109 16:50:32.704"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:32.672" endtime="20240109 16:50:32.704"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>message</pattern>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>//*[@id="digitalJeevanAlertBox"]//*[@id="alertButtton"]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 16:50:32.706" endtime="20240109 16:50:32.707"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[contains(@class, 'dropdown-toggle') and contains(text(), 'Payment')]</arg>
+<arg>timeout=30s</arg>
+<arg>error=Unable to login EPFO</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240109 16:50:32.707" endtime="20240109 16:50:32.708"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 16:50:32.705" endtime="20240109 16:50:32.708"/>
+</branch>
+<status status="PASS" starttime="20240109 16:50:32.672" endtime="20240109 16:50:32.709"/>
+</try>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logging EPFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:32.710" level="INFO">Successfully logging EPFO</msg>
+<status status="PASS" starttime="20240109 16:50:32.710" endtime="20240109 16:50:32.711"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:32.261" endtime="20240109 16:50:32.714"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:31.937" endtime="20240109 16:50:32.716"/>
+</test>
+<test id="s1-t3" name="Go to ECR upload page" line="161">
+<kw name="Click Payments Menu">
+<kw name="Click Element When Visible">
+<arg>//*[contains(@class, 'dropdown-toggle') and contains(text(), 'Payment')]</arg>
+<arg>Payment Menu</arg>
+<arg>//ul[@class='dropdown-menu m1']//a[text()='ECR/RETURN FILING']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:32.736" endtime="20240109 16:50:32.824"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:32.834" level="INFO">Clicking element '//*[contains(@class, 'dropdown-toggle') and contains(text(), 'Payment')]'.</msg>
+<status status="PASS" starttime="20240109 16:50:32.826" endtime="20240109 16:50:32.877"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:32.879" endtime="20240109 16:50:32.906"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:32.907" level="INFO">Successfully Clicked on Payment Menu</msg>
+<status status="PASS" starttime="20240109 16:50:32.906" endtime="20240109 16:50:32.908"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:32.733" endtime="20240109 16:50:32.908"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:32.727" endtime="20240109 16:50:32.909"/>
+</kw>
+<kw name="Click ECR/RETURN FILE Menu Item">
+<kw name="Click Element When Visible">
+<arg>//ul[@class='dropdown-menu m1']//a[text()='ECR/RETURN FILING']</arg>
+<arg>ECR/RETURN FILE Menu Item</arg>
+<arg>//tr[@class='row1 trs']//a[text()='ECR Upload']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:32.911" endtime="20240109 16:50:32.942"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:32.945" level="INFO">Clicking element '//ul[@class='dropdown-menu m1']//a[text()='ECR/RETURN FILING']'.</msg>
+<status status="PASS" starttime="20240109 16:50:32.943" endtime="20240109 16:50:33.539"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:33.541" endtime="20240109 16:50:33.576"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:33.583" level="INFO">Successfully Clicked on ECR/RETURN FILE Menu Item</msg>
+<status status="PASS" starttime="20240109 16:50:33.578" endtime="20240109 16:50:33.584"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:32.910" endtime="20240109 16:50:33.586"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:32.909" endtime="20240109 16:50:33.589"/>
+</kw>
+<kw name="Click ECR Upload Hyperlink">
+<kw name="Click Element When Visible">
+<arg>//tr[@class='row1 trs']//a[text()='ECR Upload']</arg>
+<arg>ECR Upload Hyperlink</arg>
+<arg>//*[@id="ui-id-3"]</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:33.606" endtime="20240109 16:50:33.640"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:33.643" level="INFO">Clicking element '//tr[@class='row1 trs']//a[text()='ECR Upload']'.</msg>
+<status status="PASS" starttime="20240109 16:50:33.641" endtime="20240109 16:50:34.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:34.451" endtime="20240109 16:50:34.481"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:34.486" level="INFO">Successfully Clicked on ECR Upload Hyperlink</msg>
+<status status="PASS" starttime="20240109 16:50:34.484" endtime="20240109 16:50:34.487"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:33.594" endtime="20240109 16:50:34.487"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:33.591" endtime="20240109 16:50:34.488"/>
+</kw>
+<kw name=" Click ECR file upload Button">
+<kw name="Click Element When Visible">
+<arg>//*[@id="ui-id-3"]</arg>
+<arg>ECR file upload Button</arg>
+<arg>//input[@id='wageMonth']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:34.491" endtime="20240109 16:50:34.521"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:34.523" level="INFO">Clicking element '//*[@id="ui-id-3"]'.</msg>
+<status status="PASS" starttime="20240109 16:50:34.522" endtime="20240109 16:50:34.571"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:34.571" endtime="20240109 16:50:34.841"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:34.843" level="INFO">Successfully Clicked on ECR file upload Button</msg>
+<status status="PASS" starttime="20240109 16:50:34.842" endtime="20240109 16:50:34.843"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:34.490" endtime="20240109 16:50:34.845"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:34.489" endtime="20240109 16:50:34.850"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:32.718" endtime="20240109 16:50:34.851"/>
+</test>
+<test id="s1-t4" name="Data of ECR Fileupload" line="166">
+<kw name="Click WageMonth Button">
+<kw name="Click Element When Visible">
+<arg>//input[@id='wageMonth']</arg>
+<arg>Month Button</arg>
+<arg>//*[@id="ui-datepicker-div"]/div[2]/button[1]</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:34.876" endtime="20240109 16:50:34.927"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:34.932" level="INFO">Clicking element '//input[@id='wageMonth']'.</msg>
+<status status="PASS" starttime="20240109 16:50:34.928" endtime="20240109 16:50:35.026"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:35.027" endtime="20240109 16:50:35.059"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:35.061" level="INFO">Successfully Clicked on Month Button</msg>
+<status status="PASS" starttime="20240109 16:50:35.060" endtime="20240109 16:50:35.061"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:34.872" endtime="20240109 16:50:35.062"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//*[@id="ui-datepicker-div"]/div[2]/button[1]</arg>
+<arg>Declaration of month</arg>
+<arg>//Div/button[contains(text(), 'Done')]</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:35.068" endtime="20240109 16:50:35.092"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:35.095" level="INFO">Clicking element '//*[@id="ui-datepicker-div"]/div[2]/button[1]'.</msg>
+<status status="PASS" starttime="20240109 16:50:35.093" endtime="20240109 16:50:35.161"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:35.163" endtime="20240109 16:50:35.268"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:35.272" level="INFO">Successfully Clicked on Declaration of month</msg>
+<status status="PASS" starttime="20240109 16:50:35.270" endtime="20240109 16:50:35.273"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:35.063" endtime="20240109 16:50:35.274"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//Div//button[contains(text(), 'Done')]</arg>
+<arg>Done</arg>
+<arg>//input[@id='salaryDate']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:35.277" endtime="20240109 16:50:35.310"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:35.313" level="INFO">Clicking element '//Div//button[contains(text(), 'Done')]'.</msg>
+<status status="PASS" starttime="20240109 16:50:35.311" endtime="20240109 16:50:35.359"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:35.359" endtime="20240109 16:50:35.391"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:35.393" level="INFO">Successfully Clicked on Done</msg>
+<status status="PASS" starttime="20240109 16:50:35.392" endtime="20240109 16:50:35.393"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:35.275" endtime="20240109 16:50:35.394"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//input[@id='salaryDate']</arg>
+<arg>Salary Dispursal</arg>
+<arg>//*[@id="ui-datepicker-div"]/table/tbody/tr[1]/td[2]/a</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:35.398" endtime="20240109 16:50:35.430"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:35.438" level="INFO">Clicking element '//input[@id='salaryDate']'.</msg>
+<status status="PASS" starttime="20240109 16:50:35.431" endtime="20240109 16:50:35.490"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:35.491" endtime="20240109 16:50:35.769"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:35.774" level="INFO">Successfully Clicked on Salary Dispursal</msg>
+<status status="PASS" starttime="20240109 16:50:35.772" endtime="20240109 16:50:35.775"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:35.394" endtime="20240109 16:50:35.777"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//*[@id="ui-datepicker-div"]/table/tbody/tr[1]/td[2]/a</arg>
+<arg>Date of salary Dispursal</arg>
+<arg>ecrFileType</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:35.791" endtime="20240109 16:50:35.819"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:35.821" level="INFO">Clicking element '//*[@id="ui-datepicker-div"]/table/tbody/tr[1]/td[2]/a'.</msg>
+<status status="PASS" starttime="20240109 16:50:35.820" endtime="20240109 16:50:35.861"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:35.863" endtime="20240109 16:50:35.895"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:35.901" level="INFO">Successfully Clicked on Date of salary Dispursal</msg>
+<status status="PASS" starttime="20240109 16:50:35.898" endtime="20240109 16:50:35.908"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:35.786" endtime="20240109 16:50:35.909"/>
+</kw>
+<kw name="Select Radio Button" library="RPA.Browser.Selenium">
+<arg>ecrFileType</arg>
+<arg>E</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20240109 16:50:35.916" level="INFO">Selecting 'E' from radio button 'ecrFileType'.</msg>
+<status status="PASS" starttime="20240109 16:50:35.910" endtime="20240109 16:50:36.020"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath://*[@id="ecrFileUploadRemarks"]</arg>
+<arg>ok</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:36.022" level="INFO">Typing text 'ok' into text field 'xpath://*[@id="ecrFileUploadRemarks"]'.</msg>
+<status status="PASS" starttime="20240109 16:50:36.021" endtime="20240109 16:50:36.102"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<var>${result}</var>
+<arg>excel_to_csv.excel_to_text</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Excel To Text" library="excel_to_csv">
+<msg timestamp="20240109 16:50:37.325" level="INFO">Conversion to text file done successfully.</msg>
+<status status="PASS" starttime="20240109 16:50:36.104" endtime="20240109 16:50:37.326"/>
+</kw>
+<msg timestamp="20240109 16:50:37.327" level="INFO">${result} = /home/buzzadmin/Downloads/EPF_Regular_ECR.txt</msg>
+<status status="PASS" starttime="20240109 16:50:36.103" endtime="20240109 16:50:37.327"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:50:37.330" level="INFO">/home/buzzadmin/Downloads/EPF_Regular_ECR.txt</msg>
+<status status="PASS" starttime="20240109 16:50:37.328" endtime="20240109 16:50:37.331"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 16:50:42.333" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240109 16:50:37.332" endtime="20240109 16:50:42.335"/>
+</kw>
+<kw name="Choose File" library="RPA.Browser.Selenium">
+<arg>//*[@id="multiFile"]</arg>
+<arg>${result}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20240109 16:50:42.344" level="INFO">Sending /home/buzzadmin/Downloads/EPF_Regular_ECR.txt to browser.</msg>
+<status status="PASS" starttime="20240109 16:50:42.337" endtime="20240109 16:50:42.457"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[@id="btnUploadECRFile"]</arg>
+<arg>timeout=30s</arg>
+<arg>error=unable to find Upload button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:42.458" endtime="20240109 16:50:42.509"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//*[@id="btnUploadECRFile"]</arg>
+<arg>upload</arg>
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:50:42.512" endtime="20240109 16:50:42.531"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:50:42.534" level="INFO">Clicking element '//*[@id="btnUploadECRFile"]'.</msg>
+<status status="PASS" starttime="20240109 16:50:42.532" endtime="20240109 16:51:06.027"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:06.030" endtime="20240109 16:51:06.059"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:51:06.061" level="INFO">Successfully Clicked on upload</msg>
+<status status="PASS" starttime="20240109 16:51:06.060" endtime="20240109 16:51:06.063"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:42.510" endtime="20240109 16:51:06.067"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<arg>timeout=30s</arg>
+<arg>error= unable to find Success message</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:06.068" endtime="20240109 16:51:06.087"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:34.855" endtime="20240109 16:51:06.088"/>
+</kw>
+<status status="PASS" starttime="20240109 16:50:34.853" endtime="20240109 16:51:06.088"/>
+</test>
+<test id="s1-t5" name="ECR File Verification" line="168">
+<kw name="Validate and Wait for Appear Verify">
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${actual_message}</var>
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:06.130" level="INFO">${actual_message} = File Validation Successfull. File Processing is in progress and may take more time. Please revisit after some time.</msg>
+<status status="PASS" starttime="20240109 16:51:06.092" endtime="20240109 16:51:06.131"/>
+</kw>
+<if>
+<branch type="IF" condition="$actual_message == $Expected_Message">
+<while condition="$Counter &gt; $Retry_Limit">
+<iter>
+<try>
+<branch type="TRY">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//*[@id="tbClaimList"]//tbody/tr[1]/td[12]/a[contains(text(), 'Verify')]</arg>
+<arg>timeout=30s</arg>
+<arg>error=not found</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240109 16:51:06.137" endtime="20240109 16:51:06.138"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 16:51:06.136" endtime="20240109 16:51:06.138"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Sleep" library="BuiltIn">
+<arg>30</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 16:51:06.139" endtime="20240109 16:51:06.140"/>
+</kw>
+<kw name="${Counter}= ${Counter} + 1">
+<status status="NOT RUN" starttime="20240109 16:51:06.175" endtime="20240109 16:51:06.176"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240109 16:51:06.176" endtime="20240109 16:51:06.177"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 16:51:06.139" endtime="20240109 16:51:06.178"/>
+</branch>
+<status status="NOT RUN" starttime="20240109 16:51:06.136" endtime="20240109 16:51:06.179"/>
+</try>
+<status status="NOT RUN" starttime="20240109 16:51:06.134" endtime="20240109 16:51:06.179"/>
+</iter>
+<status status="NOT RUN" starttime="20240109 16:51:06.134" endtime="20240109 16:51:06.180"/>
+</while>
+<status status="PASS" starttime="20240109 16:51:06.133" endtime="20240109 16:51:06.181"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>120</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240109 16:51:06.183" endtime="20240109 16:51:06.183"/>
+</kw>
+<status status="NOT RUN" starttime="20240109 16:51:06.182" endtime="20240109 16:51:06.184"/>
+</branch>
+<status status="PASS" starttime="20240109 16:51:06.133" endtime="20240109 16:51:06.184"/>
+</if>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>//*[@id="tbClaimList"]//tbody/tr[1]/td[12]/a[contains(text(), 'Verify')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:06.186" level="INFO">Clicking element '//*[@id="tbClaimList"]//tbody/tr[1]/td[12]/a[contains(text(), 'Verify')]'.</msg>
+<status status="PASS" starttime="20240109 16:51:06.185" endtime="20240109 16:51:06.250"/>
+</kw>
+<kw name="Handle Alert" library="RPA.Browser.Selenium">
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20240109 16:51:06.252" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240109 16:51:06.251" endtime="20240109 16:51:06.272"/>
+</kw>
+<kw name="List Files In Directory" library="OperatingSystem">
+<var>${files}</var>
+<arg>${DOWNLOAD_FOLDER}</arg>
+<doc>Wrapper for `List Directory` that returns only files.</doc>
+<msg timestamp="20240109 16:51:06.275" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///home/buzzadmin/Downloads"&gt;/home/buzzadmin/Downloads&lt;/a&gt;'.</msg>
+<msg timestamp="20240109 16:51:06.288" level="INFO">55 files:
+EAadhaar_2710011011330620220818120031_27112023162237.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401005816_1704690687543_2024010838487543344.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401005819_1704690701338_2024010838501338393.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401005828_1704690897244_2024010838697244403.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401005831_1704690936101_2024010838736101996.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401007922_1704779763360_20240109411633603.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401008824_1704795124156_2024010956524156134.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401008826_1704795134576_2024010956534576843.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401008880_1704795888721_2024010957288721309.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401008893_1704796115725_2024010957515725370 (1).pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401008893_1704796115725_2024010957515725370.pdf
+ECR_CHLN_REC_TNMAS0052044000_4102401008937_1704796712172_2024010958112172536.pdf
+EPF Regular ECR.csv
+EPF_Regular_ECR.txt
+EPF_Regular_ECR.xlsx
+EPF_Regular_ECR_2024010837574098723 (1).txt
+EPF_Regular_ECR_2024010837574098723.txt
+EPF_Regular_ECR_2024010838448567308.txt
+EPF_Regular_ECR_2024010838688481219 (1).txt
+EPF_Regular_ECR_2024010838688481219 (2).txt
+EPF_Regular_ECR_2024010838688481219.txt
+EPF_Regular_ECR_2024010838694837579 (1).txt
+EPF_Regular_ECR_2024010838694837579.txt
+EPF_Regular_ECR_2024010941118356655.txt
+EPF_Regular_ECR_2024010943843752579.txt
+EPF_Regular_ECR_202401094389432840 (1).txt
+EPF_Regular_ECR_202401094389432840 (2).txt
+EPF_Regular_ECR_202401094389432840 (3).txt
+EPF_Regular_ECR_202401094389432840.txt
+EPF_Regular_ECR_2024010956504312747.txt
+ESIC Remittance Reports.xls
+HyderabadCloud_UEMSLinuxAgent.zip
+PF ECR File 2.0.xlsx
+PF Excel_Sheet Sample.xlsx
+PF(1).csv
+PF.csv
+PF.xlsx
+Python-3.12.1.tar.xz
+Screenshot (344).png
+TNMAS0052044000_99629759_1704782448666_2024010943848666865.pdf
+VMware-Workstation-Full-17.5.0-22583795.x86_64.bundle
+code-1.85.1-1702462241.el7.x86_64.rpm
+code_1.84.2-1699528352_amd64 (2).deb
+code_1.85.1-1702462158_amd64 (1).deb
+code_1.85.1-1702462158_amd64.deb
+ecr file.csv
+example-vscode-basics-main.zip
+getplayer-linux
+manasaResume (1).docx
+manasaResume.docx
+pycharm-professional-2023.2.5(1).tar.gz
+resume.xlsx
+robocorp-workforce-agent.AppImage
+totp.py
+ubuntu-20.04.6-desktop-amd64.iso</msg>
+<msg timestamp="20240109 16:51:06.290" level="INFO">${files} = ['EAadhaar_2710011011330620220818120031_27112023162237.pdf', 'ECR_CHLN_REC_TNMAS0052044000_4102401005816_1704690687543_2024010838487543344.pdf', 'ECR_CHLN_REC_TNMAS0052044000_4102401005819_17046907013...</msg>
+<status status="PASS" starttime="20240109 16:51:06.274" endtime="20240109 16:51:06.290"/>
+</kw>
+<for flavor="IN">
+<var>${file}</var>
+<value>@{files}</value>
+<iter>
+<var name="${file}">EAadhaar_2710011011330620220818120031_27112023162237.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.301" level="INFO">${lowercase_file} = eaadhaar_2710011011330620220818120031_27112023162237.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.294" endtime="20240109 16:51:06.302"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.303" endtime="20240109 16:51:06.305"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.306" endtime="20240109 16:51:06.307"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.307" endtime="20240109 16:51:06.309"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.292" endtime="20240109 16:51:06.309"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401005816_1704690687543_2024010838487543344.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.313" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401005816_1704690687543_2024010838487543344.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.311" endtime="20240109 16:51:06.314"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.317" endtime="20240109 16:51:06.318"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.319" endtime="20240109 16:51:06.320"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.321" endtime="20240109 16:51:06.322"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.310" endtime="20240109 16:51:06.322"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401005819_1704690701338_2024010838501338393.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.324" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401005819_1704690701338_2024010838501338393.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.323" endtime="20240109 16:51:06.325"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.325" endtime="20240109 16:51:06.326"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.327" endtime="20240109 16:51:06.334"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.335" endtime="20240109 16:51:06.337"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.323" endtime="20240109 16:51:06.337"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401005828_1704690897244_2024010838697244403.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.371" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401005828_1704690897244_2024010838697244403.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.369" endtime="20240109 16:51:06.372"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.373" endtime="20240109 16:51:06.375"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.376" endtime="20240109 16:51:06.380"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.382" endtime="20240109 16:51:06.390"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.346" endtime="20240109 16:51:06.392"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401005831_1704690936101_2024010838736101996.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.405" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401005831_1704690936101_2024010838736101996.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.402" endtime="20240109 16:51:06.406"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.407" endtime="20240109 16:51:06.412"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.414" endtime="20240109 16:51:06.416"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.418" endtime="20240109 16:51:06.422"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.393" endtime="20240109 16:51:06.423"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401007922_1704779763360_20240109411633603.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.436" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401007922_1704779763360_20240109411633603.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.435" endtime="20240109 16:51:06.436"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.437" endtime="20240109 16:51:06.439"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.441" endtime="20240109 16:51:06.443"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.445" endtime="20240109 16:51:06.450"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.434" endtime="20240109 16:51:06.451"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401008824_1704795124156_2024010956524156134.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.457" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401008824_1704795124156_2024010956524156134.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.455" endtime="20240109 16:51:06.458"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.459" endtime="20240109 16:51:06.462"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.466" endtime="20240109 16:51:06.469"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.471" endtime="20240109 16:51:06.473"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.453" endtime="20240109 16:51:06.474"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401008826_1704795134576_2024010956534576843.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.480" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401008826_1704795134576_2024010956534576843.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.476" endtime="20240109 16:51:06.480"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.482" endtime="20240109 16:51:06.483"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.485" endtime="20240109 16:51:06.486"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.486" endtime="20240109 16:51:06.487"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.475" endtime="20240109 16:51:06.488"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401008880_1704795888721_2024010957288721309.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.491" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401008880_1704795888721_2024010957288721309.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.490" endtime="20240109 16:51:06.491"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.492" endtime="20240109 16:51:06.493"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.494" endtime="20240109 16:51:06.495"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.496" endtime="20240109 16:51:06.500"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.489" endtime="20240109 16:51:06.501"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401008893_1704796115725_2024010957515725370 (1).pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.504" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401008893_1704796115725_2024010957515725370 (1).pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.503" endtime="20240109 16:51:06.505"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.506" endtime="20240109 16:51:06.508"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.509" endtime="20240109 16:51:06.511"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.513" endtime="20240109 16:51:06.516"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.502" endtime="20240109 16:51:06.517"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401008893_1704796115725_2024010957515725370.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.521" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401008893_1704796115725_2024010957515725370.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.519" endtime="20240109 16:51:06.521"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.521" endtime="20240109 16:51:06.523"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.523" endtime="20240109 16:51:06.524"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.525" endtime="20240109 16:51:06.526"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.518" endtime="20240109 16:51:06.526"/>
+</iter>
+<iter>
+<var name="${file}">ECR_CHLN_REC_TNMAS0052044000_4102401008937_1704796712172_2024010958112172536.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.538" level="INFO">${lowercase_file} = ecr_chln_rec_tnmas0052044000_4102401008937_1704796712172_2024010958112172536.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:06.536" endtime="20240109 16:51:06.539"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.540" endtime="20240109 16:51:06.542"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.544" endtime="20240109 16:51:06.550"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.551" endtime="20240109 16:51:06.552"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.534" endtime="20240109 16:51:06.552"/>
+</iter>
+<iter>
+<var name="${file}">EPF Regular ECR.csv</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.557" level="INFO">${lowercase_file} = epf regular ecr.csv</msg>
+<status status="PASS" starttime="20240109 16:51:06.556" endtime="20240109 16:51:06.558"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.559" endtime="20240109 16:51:06.562"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.564" endtime="20240109 16:51:06.569"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.570" endtime="20240109 16:51:06.573"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.553" endtime="20240109 16:51:06.574"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR.txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.582" level="INFO">${lowercase_file} = epf_regular_ecr.txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.577" endtime="20240109 16:51:06.583"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.585" endtime="20240109 16:51:06.589"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.591" endtime="20240109 16:51:06.593"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.595" endtime="20240109 16:51:06.597"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.575" endtime="20240109 16:51:06.598"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR.xlsx</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.604" level="INFO">${lowercase_file} = epf_regular_ecr.xlsx</msg>
+<status status="PASS" starttime="20240109 16:51:06.602" endtime="20240109 16:51:06.605"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.607" endtime="20240109 16:51:06.609"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.610" endtime="20240109 16:51:06.614"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.616" endtime="20240109 16:51:06.618"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.600" endtime="20240109 16:51:06.619"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010837574098723 (1).txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.624" level="INFO">${lowercase_file} = epf_regular_ecr_2024010837574098723 (1).txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.622" endtime="20240109 16:51:06.624"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.626" endtime="20240109 16:51:06.632"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.633" endtime="20240109 16:51:06.636"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.638" endtime="20240109 16:51:06.647"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.621" endtime="20240109 16:51:06.651"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010837574098723.txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.656" level="INFO">${lowercase_file} = epf_regular_ecr_2024010837574098723.txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.654" endtime="20240109 16:51:06.656"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.658" endtime="20240109 16:51:06.660"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.666" endtime="20240109 16:51:06.668"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.669" endtime="20240109 16:51:06.671"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.653" endtime="20240109 16:51:06.672"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010838448567308.txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.676" level="INFO">${lowercase_file} = epf_regular_ecr_2024010838448567308.txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.674" endtime="20240109 16:51:06.677"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.682" endtime="20240109 16:51:06.685"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.686" endtime="20240109 16:51:06.689"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.690" endtime="20240109 16:51:06.692"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.673" endtime="20240109 16:51:06.693"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010838688481219 (1).txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.702" level="INFO">${lowercase_file} = epf_regular_ecr_2024010838688481219 (1).txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.700" endtime="20240109 16:51:06.702"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.704" endtime="20240109 16:51:06.706"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.706" endtime="20240109 16:51:06.708"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.709" endtime="20240109 16:51:06.713"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.698" endtime="20240109 16:51:06.714"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010838688481219 (2).txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.717" level="INFO">${lowercase_file} = epf_regular_ecr_2024010838688481219 (2).txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.716" endtime="20240109 16:51:06.717"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.718" endtime="20240109 16:51:06.719"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.720" endtime="20240109 16:51:06.721"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.721" endtime="20240109 16:51:06.722"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.715" endtime="20240109 16:51:06.723"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010838688481219.txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.726" level="INFO">${lowercase_file} = epf_regular_ecr_2024010838688481219.txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.724" endtime="20240109 16:51:06.726"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.727" endtime="20240109 16:51:06.730"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.732" endtime="20240109 16:51:06.734"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.735" endtime="20240109 16:51:06.736"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.723" endtime="20240109 16:51:06.737"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010838694837579 (1).txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.740" level="INFO">${lowercase_file} = epf_regular_ecr_2024010838694837579 (1).txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.738" endtime="20240109 16:51:06.740"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.741" endtime="20240109 16:51:06.742"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.743" endtime="20240109 16:51:06.744"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.745" endtime="20240109 16:51:06.747"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.738" endtime="20240109 16:51:06.748"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010838694837579.txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.751" level="INFO">${lowercase_file} = epf_regular_ecr_2024010838694837579.txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.750" endtime="20240109 16:51:06.751"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.752" endtime="20240109 16:51:06.753"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.754" endtime="20240109 16:51:06.755"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.756" endtime="20240109 16:51:06.757"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.749" endtime="20240109 16:51:06.757"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010941118356655.txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.759" level="INFO">${lowercase_file} = epf_regular_ecr_2024010941118356655.txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.758" endtime="20240109 16:51:06.760"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.760" endtime="20240109 16:51:06.765"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.770" endtime="20240109 16:51:06.773"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.775" endtime="20240109 16:51:06.778"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.757" endtime="20240109 16:51:06.780"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010943843752579.txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.786" level="INFO">${lowercase_file} = epf_regular_ecr_2024010943843752579.txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.784" endtime="20240109 16:51:06.786"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.787" endtime="20240109 16:51:06.789"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.790" endtime="20240109 16:51:06.792"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.794" endtime="20240109 16:51:06.799"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.782" endtime="20240109 16:51:06.801"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_202401094389432840 (1).txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.806" level="INFO">${lowercase_file} = epf_regular_ecr_202401094389432840 (1).txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.804" endtime="20240109 16:51:06.806"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.808" endtime="20240109 16:51:06.810"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.814" endtime="20240109 16:51:06.817"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.818" endtime="20240109 16:51:06.820"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.802" endtime="20240109 16:51:06.822"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_202401094389432840 (2).txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.826" level="INFO">${lowercase_file} = epf_regular_ecr_202401094389432840 (2).txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.824" endtime="20240109 16:51:06.827"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.829" endtime="20240109 16:51:06.849"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.852" endtime="20240109 16:51:06.854"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.868" endtime="20240109 16:51:06.871"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.823" endtime="20240109 16:51:06.872"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_202401094389432840 (3).txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.886" level="INFO">${lowercase_file} = epf_regular_ecr_202401094389432840 (3).txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.876" endtime="20240109 16:51:06.887"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.888" endtime="20240109 16:51:06.890"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.890" endtime="20240109 16:51:06.893"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.901" endtime="20240109 16:51:06.903"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.873" endtime="20240109 16:51:06.904"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_202401094389432840.txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.907" level="INFO">${lowercase_file} = epf_regular_ecr_202401094389432840.txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.906" endtime="20240109 16:51:06.907"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.909" endtime="20240109 16:51:06.918"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.925" endtime="20240109 16:51:06.938"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.950" endtime="20240109 16:51:06.952"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.905" endtime="20240109 16:51:06.953"/>
+</iter>
+<iter>
+<var name="${file}">EPF_Regular_ECR_2024010956504312747.txt</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.958" level="INFO">${lowercase_file} = epf_regular_ecr_2024010956504312747.txt</msg>
+<status status="PASS" starttime="20240109 16:51:06.956" endtime="20240109 16:51:06.958"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.959" endtime="20240109 16:51:06.965"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.967" endtime="20240109 16:51:06.968"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.970" endtime="20240109 16:51:06.971"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.954" endtime="20240109 16:51:06.972"/>
+</iter>
+<iter>
+<var name="${file}">ESIC Remittance Reports.xls</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.977" level="INFO">${lowercase_file} = esic remittance reports.xls</msg>
+<status status="PASS" starttime="20240109 16:51:06.975" endtime="20240109 16:51:06.977"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.981" endtime="20240109 16:51:06.986"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.987" endtime="20240109 16:51:06.989"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.989" endtime="20240109 16:51:06.991"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.973" endtime="20240109 16:51:06.991"/>
+</iter>
+<iter>
+<var name="${file}">HyderabadCloud_UEMSLinuxAgent.zip</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:06.994" level="INFO">${lowercase_file} = hyderabadcloud_uemslinuxagent.zip</msg>
+<status status="PASS" starttime="20240109 16:51:06.993" endtime="20240109 16:51:06.994"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:06.997" endtime="20240109 16:51:06.999"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.000" endtime="20240109 16:51:07.001"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.002" endtime="20240109 16:51:07.004"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.992" endtime="20240109 16:51:07.004"/>
+</iter>
+<iter>
+<var name="${file}">PF ECR File 2.0.xlsx</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.007" level="INFO">${lowercase_file} = pf ecr file 2.0.xlsx</msg>
+<status status="PASS" starttime="20240109 16:51:07.006" endtime="20240109 16:51:07.007"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.008" endtime="20240109 16:51:07.010"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.010" endtime="20240109 16:51:07.014"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.015" endtime="20240109 16:51:07.019"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.005" endtime="20240109 16:51:07.020"/>
+</iter>
+<iter>
+<var name="${file}">PF Excel_Sheet Sample.xlsx</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.024" level="INFO">${lowercase_file} = pf excel_sheet sample.xlsx</msg>
+<status status="PASS" starttime="20240109 16:51:07.023" endtime="20240109 16:51:07.025"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.026" endtime="20240109 16:51:07.028"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.029" endtime="20240109 16:51:07.032"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.033" endtime="20240109 16:51:07.036"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.021" endtime="20240109 16:51:07.037"/>
+</iter>
+<iter>
+<var name="${file}">PF(1).csv</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.042" level="INFO">${lowercase_file} = pf(1).csv</msg>
+<status status="PASS" starttime="20240109 16:51:07.040" endtime="20240109 16:51:07.043"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.044" endtime="20240109 16:51:07.047"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.050" endtime="20240109 16:51:07.052"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.054" endtime="20240109 16:51:07.064"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.038" endtime="20240109 16:51:07.065"/>
+</iter>
+<iter>
+<var name="${file}">PF.csv</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.084" level="INFO">${lowercase_file} = pf.csv</msg>
+<status status="PASS" starttime="20240109 16:51:07.082" endtime="20240109 16:51:07.085"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.096" endtime="20240109 16:51:07.099"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.100" endtime="20240109 16:51:07.102"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.104" endtime="20240109 16:51:07.108"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.066" endtime="20240109 16:51:07.109"/>
+</iter>
+<iter>
+<var name="${file}">PF.xlsx</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.123" level="INFO">${lowercase_file} = pf.xlsx</msg>
+<status status="PASS" starttime="20240109 16:51:07.120" endtime="20240109 16:51:07.123"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.125" endtime="20240109 16:51:07.134"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.136" endtime="20240109 16:51:07.138"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.139" endtime="20240109 16:51:07.148"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.110" endtime="20240109 16:51:07.149"/>
+</iter>
+<iter>
+<var name="${file}">Python-3.12.1.tar.xz</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.156" level="INFO">${lowercase_file} = python-3.12.1.tar.xz</msg>
+<status status="PASS" starttime="20240109 16:51:07.154" endtime="20240109 16:51:07.167"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.168" endtime="20240109 16:51:07.171"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.183" endtime="20240109 16:51:07.185"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.193" endtime="20240109 16:51:07.196"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.150" endtime="20240109 16:51:07.203"/>
+</iter>
+<iter>
+<var name="${file}">Screenshot (344).png</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.208" level="INFO">${lowercase_file} = screenshot (344).png</msg>
+<status status="PASS" starttime="20240109 16:51:07.206" endtime="20240109 16:51:07.208"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.211" endtime="20240109 16:51:07.215"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.216" endtime="20240109 16:51:07.219"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.221" endtime="20240109 16:51:07.223"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.204" endtime="20240109 16:51:07.224"/>
+</iter>
+<iter>
+<var name="${file}">TNMAS0052044000_99629759_1704782448666_2024010943848666865.pdf</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.233" level="INFO">${lowercase_file} = tnmas0052044000_99629759_1704782448666_2024010943848666865.pdf</msg>
+<status status="PASS" starttime="20240109 16:51:07.230" endtime="20240109 16:51:07.234"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.235" endtime="20240109 16:51:07.238"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Move File" library="OperatingSystem">
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Moves the source file into the destination.</doc>
+<msg timestamp="20240109 16:51:07.254" level="INFO" html="true">Moved file from '&lt;a href="file:///home/buzzadmin/Downloads/TNMAS0052044000_99629759_1704782448666_2024010943848666865.pdf"&gt;/home/buzzadmin/Downloads/TNMAS0052044000_99629759_1704782448666_2024010943848666865.pdf&lt;/a&gt;' to '&lt;a href="file:///home/buzzadmin/Desktop/EPFO/TNMAS0052044000_99629759_1704782448666_2024010943848666865.pdf"&gt;/home/buzzadmin/Desktop/EPFO/TNMAS0052044000_99629759_1704782448666_2024010943848666865.pdf&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240109 16:51:07.243" endtime="20240109 16:51:07.255"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.240" endtime="20240109 16:51:07.256"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.257" endtime="20240109 16:51:07.260"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.227" endtime="20240109 16:51:07.261"/>
+</iter>
+<iter>
+<var name="${file}">VMware-Workstation-Full-17.5.0-22583795.x86_64.bundle</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.273" level="INFO">${lowercase_file} = vmware-workstation-full-17.5.0-22583795.x86_64.bundle</msg>
+<status status="PASS" starttime="20240109 16:51:07.271" endtime="20240109 16:51:07.273"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.275" endtime="20240109 16:51:07.276"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.277" endtime="20240109 16:51:07.290"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.291" endtime="20240109 16:51:07.293"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.268" endtime="20240109 16:51:07.293"/>
+</iter>
+<iter>
+<var name="${file}">code-1.85.1-1702462241.el7.x86_64.rpm</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.303" level="INFO">${lowercase_file} = code-1.85.1-1702462241.el7.x86_64.rpm</msg>
+<status status="PASS" starttime="20240109 16:51:07.300" endtime="20240109 16:51:07.303"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.305" endtime="20240109 16:51:07.307"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.308" endtime="20240109 16:51:07.309"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.310" endtime="20240109 16:51:07.318"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.294" endtime="20240109 16:51:07.320"/>
+</iter>
+<iter>
+<var name="${file}">code_1.84.2-1699528352_amd64 (2).deb</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.323" level="INFO">${lowercase_file} = code_1.84.2-1699528352_amd64 (2).deb</msg>
+<status status="PASS" starttime="20240109 16:51:07.322" endtime="20240109 16:51:07.323"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.324" endtime="20240109 16:51:07.325"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.326" endtime="20240109 16:51:07.327"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.328" endtime="20240109 16:51:07.334"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.321" endtime="20240109 16:51:07.336"/>
+</iter>
+<iter>
+<var name="${file}">code_1.85.1-1702462158_amd64 (1).deb</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.339" level="INFO">${lowercase_file} = code_1.85.1-1702462158_amd64 (1).deb</msg>
+<status status="PASS" starttime="20240109 16:51:07.338" endtime="20240109 16:51:07.339"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.340" endtime="20240109 16:51:07.341"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.342" endtime="20240109 16:51:07.345"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.351" endtime="20240109 16:51:07.354"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.337" endtime="20240109 16:51:07.355"/>
+</iter>
+<iter>
+<var name="${file}">code_1.85.1-1702462158_amd64.deb</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.360" level="INFO">${lowercase_file} = code_1.85.1-1702462158_amd64.deb</msg>
+<status status="PASS" starttime="20240109 16:51:07.358" endtime="20240109 16:51:07.370"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.371" endtime="20240109 16:51:07.373"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.374" endtime="20240109 16:51:07.378"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.388" endtime="20240109 16:51:07.403"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.357" endtime="20240109 16:51:07.405"/>
+</iter>
+<iter>
+<var name="${file}">ecr file.csv</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.418" level="INFO">${lowercase_file} = ecr file.csv</msg>
+<status status="PASS" starttime="20240109 16:51:07.409" endtime="20240109 16:51:07.419"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.422" endtime="20240109 16:51:07.425"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.433" endtime="20240109 16:51:07.435"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.442" endtime="20240109 16:51:07.446"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.407" endtime="20240109 16:51:07.447"/>
+</iter>
+<iter>
+<var name="${file}">example-vscode-basics-main.zip</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.458" level="INFO">${lowercase_file} = example-vscode-basics-main.zip</msg>
+<status status="PASS" starttime="20240109 16:51:07.456" endtime="20240109 16:51:07.459"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.461" endtime="20240109 16:51:07.470"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.472" endtime="20240109 16:51:07.474"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.475" endtime="20240109 16:51:07.480"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.449" endtime="20240109 16:51:07.482"/>
+</iter>
+<iter>
+<var name="${file}">getplayer-linux</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.488" level="INFO">${lowercase_file} = getplayer-linux</msg>
+<status status="PASS" starttime="20240109 16:51:07.486" endtime="20240109 16:51:07.489"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.490" endtime="20240109 16:51:07.492"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.494" endtime="20240109 16:51:07.500"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.501" endtime="20240109 16:51:07.503"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.484" endtime="20240109 16:51:07.504"/>
+</iter>
+<iter>
+<var name="${file}">manasaResume (1).docx</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.507" level="INFO">${lowercase_file} = manasaresume (1).docx</msg>
+<status status="PASS" starttime="20240109 16:51:07.505" endtime="20240109 16:51:07.507"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.508" endtime="20240109 16:51:07.509"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.510" endtime="20240109 16:51:07.512"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.513" endtime="20240109 16:51:07.516"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.505" endtime="20240109 16:51:07.517"/>
+</iter>
+<iter>
+<var name="${file}">manasaResume.docx</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.520" level="INFO">${lowercase_file} = manasaresume.docx</msg>
+<status status="PASS" starttime="20240109 16:51:07.519" endtime="20240109 16:51:07.521"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.522" endtime="20240109 16:51:07.523"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.524" endtime="20240109 16:51:07.525"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.525" endtime="20240109 16:51:07.526"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.518" endtime="20240109 16:51:07.527"/>
+</iter>
+<iter>
+<var name="${file}">pycharm-professional-2023.2.5(1).tar.gz</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.533" level="INFO">${lowercase_file} = pycharm-professional-2023.2.5(1).tar.gz</msg>
+<status status="PASS" starttime="20240109 16:51:07.529" endtime="20240109 16:51:07.533"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.535" endtime="20240109 16:51:07.536"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.538" endtime="20240109 16:51:07.539"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.541" endtime="20240109 16:51:07.544"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.528" endtime="20240109 16:51:07.545"/>
+</iter>
+<iter>
+<var name="${file}">resume.xlsx</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.551" level="INFO">${lowercase_file} = resume.xlsx</msg>
+<status status="PASS" starttime="20240109 16:51:07.549" endtime="20240109 16:51:07.552"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.553" endtime="20240109 16:51:07.554"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.555" endtime="20240109 16:51:07.561"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.563" endtime="20240109 16:51:07.565"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.547" endtime="20240109 16:51:07.566"/>
+</iter>
+<iter>
+<var name="${file}">robocorp-workforce-agent.AppImage</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.570" level="INFO">${lowercase_file} = robocorp-workforce-agent.appimage</msg>
+<status status="PASS" starttime="20240109 16:51:07.568" endtime="20240109 16:51:07.570"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.571" endtime="20240109 16:51:07.573"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.573" endtime="20240109 16:51:07.574"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.575" endtime="20240109 16:51:07.576"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.567" endtime="20240109 16:51:07.576"/>
+</iter>
+<iter>
+<var name="${file}">totp.py</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.580" level="INFO">${lowercase_file} = totp.py</msg>
+<status status="PASS" starttime="20240109 16:51:07.579" endtime="20240109 16:51:07.581"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.583" endtime="20240109 16:51:07.584"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.585" endtime="20240109 16:51:07.586"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.587" endtime="20240109 16:51:07.588"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.577" endtime="20240109 16:51:07.588"/>
+</iter>
+<iter>
+<var name="${file}">ubuntu-20.04.6-desktop-amd64.iso</var>
+<kw name="Convert To Lower Case" library="String">
+<var>${lowercase_file}</var>
+<arg>${file}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20240109 16:51:07.591" level="INFO">${lowercase_file} = ubuntu-20.04.6-desktop-amd64.iso</msg>
+<status status="PASS" starttime="20240109 16:51:07.590" endtime="20240109 16:51:07.591"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("EPF_Regular_ECR") or "${lowercase_file}".startswith("EPF_Regular_ECR")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.592" endtime="20240109 16:51:07.593"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("tnma") or "${lowercase_file}".startswith("tnma")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.594" endtime="20240109 16:51:07.599"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${lowercase_file}".startswith("ECR_CHLN_REC_TNMA") or "${lowercase_file}".startswith("ECR_CHLN_REC_TNMA")</arg>
+<arg>Move File</arg>
+<arg>${DOWNLOAD_FOLDER}/${file}</arg>
+<arg>${SHARED_PATH}/${file}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240109 16:51:07.600" endtime="20240109 16:51:07.602"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.589" endtime="20240109 16:51:07.603"/>
+</iter>
+<status status="PASS" starttime="20240109 16:51:06.291" endtime="20240109 16:51:07.605"/>
+</for>
+<status status="PASS" starttime="20240109 16:51:06.091" endtime="20240109 16:51:07.608"/>
+</kw>
+<kw name="Download ECR File">
+<kw name="Click Element When Visible">
+<arg>//div[@class='form-horizontal algncenter']/table/tbody/tr[1]/td[9]/a[1]</arg>
+<arg>ECR</arg>
+<arg>//div[@class='form-horizontal algncenter']/table/tbody/tr[1]/td[10]/a</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:07.616" endtime="20240109 16:51:07.649"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:07.652" level="INFO">Clicking element '//div[@class='form-horizontal algncenter']/table/tbody/tr[1]/td[9]/a[1]'.</msg>
+<status status="PASS" starttime="20240109 16:51:07.650" endtime="20240109 16:51:07.812"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:07.817" endtime="20240109 16:51:07.877"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:51:07.886" level="INFO">Successfully Clicked on ECR</msg>
+<status status="PASS" starttime="20240109 16:51:07.885" endtime="20240109 16:51:07.887"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.613" endtime="20240109 16:51:07.887"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.610" endtime="20240109 16:51:07.888"/>
+</kw>
+<kw name="Download ECR Statement">
+<kw name="Click Element When Visible">
+<arg>//div[@class='form-horizontal algncenter']/table/tbody/tr[1]/td[10]/a</arg>
+<arg>ECR Statament</arg>
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:07.894" endtime="20240109 16:51:07.930"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:07.936" level="INFO">Clicking element '//div[@class='form-horizontal algncenter']/table/tbody/tr[1]/td[10]/a'.</msg>
+<status status="PASS" starttime="20240109 16:51:07.932" endtime="20240109 16:51:08.088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:08.090" endtime="20240109 16:51:08.135"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:51:08.138" level="INFO">Successfully Clicked on ECR Statament</msg>
+<status status="PASS" starttime="20240109 16:51:08.136" endtime="20240109 16:51:08.138"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.891" endtime="20240109 16:51:08.139"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:07.889" endtime="20240109 16:51:08.140"/>
+</kw>
+<kw name="Generate TRRN Number and Click Prepare Challan Button">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:08.143" endtime="20240109 16:51:08.236"/>
+</kw>
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${text}</var>
+<arg>xpath=//div[@class='alert alert-success']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:08.273" level="INFO">${text} = ECR verified successfully. TRRN is 4102401009074. Kindly prepare challan for the same.</msg>
+<status status="PASS" starttime="20240109 16:51:08.238" endtime="20240109 16:51:08.273"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Original Text: ${text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:51:08.275" level="INFO">Original Text: ECR verified successfully. TRRN is 4102401009074. Kindly prepare challan for the same.</msg>
+<status status="PASS" starttime="20240109 16:51:08.274" endtime="20240109 16:51:08.275"/>
+</kw>
+<kw name="Get Regexp Matches" library="String">
+<var>${transid}</var>
+<arg>${text}</arg>
+<arg>(?sim)(?&lt;=TRRN is\\s)\\d+</arg>
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<msg timestamp="20240109 16:51:08.279" level="INFO">${transid} = ['4102401009074']</msg>
+<status status="PASS" starttime="20240109 16:51:08.276" endtime="20240109 16:51:08.280"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>NewText: ${transid[0]}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:51:08.289" level="INFO">NewText: 4102401009074</msg>
+<status status="PASS" starttime="20240109 16:51:08.283" endtime="20240109 16:51:08.290"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 16:51:18.294" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240109 16:51:08.292" endtime="20240109 16:51:18.299"/>
+</kw>
+<kw name="Get WebElement" library="RPA.Browser.Selenium">
+<var>${link_element}</var>
+<arg>xpath=//tr[td[text()='${transid[0]}']]//a[contains(text(), 'Prepare Challan')]</arg>
+<doc>Returns the first ``Element`` matching the given ``locator``.</doc>
+<msg timestamp="20240109 16:51:18.359" level="INFO">${link_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="103e510dd77033d661a581e129fb04f8", element="A711CDB600E26D222DCCE2539B6E59CF_element_206")&gt;</msg>
+<status status="PASS" starttime="20240109 16:51:18.304" endtime="20240109 16:51:18.359"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${link_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:18.364" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="103e510dd77033d661a581e129fb04f8", element="A711CDB600E26D222DCCE2539B6E59CF_element_206")&gt;'.</msg>
+<status status="PASS" starttime="20240109 16:51:18.360" endtime="20240109 16:51:19.251"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>//input[@id='epfInspectionCharges']</arg>
+<arg>${EPF_Inspection_Charges}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:19.256" level="INFO">Typing text '0' into text field '//input[@id='epfInspectionCharges']'.</msg>
+<status status="PASS" starttime="20240109 16:51:19.253" endtime="20240109 16:51:19.344"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>//input[@id="edliAdministrationCharges"]</arg>
+<arg>${EDLI_Administration_Charges}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:19.349" level="INFO">Typing text '0' into text field '//input[@id="edliAdministrationCharges"]'.</msg>
+<status status="PASS" starttime="20240109 16:51:19.346" endtime="20240109 16:51:19.426"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>//input[@id="edliInspectionCharges"]</arg>
+<arg>${EDLI_Inspection_Charges}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:19.433" level="INFO">Typing text '0' into text field '//input[@id="edliInspectionCharges"]'.</msg>
+<status status="PASS" starttime="20240109 16:51:19.427" endtime="20240109 16:51:19.523"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>//input[@id='totalNumberOfEmployeesInMonth']</arg>
+<arg>${Total_Number_Of_Employees_In_Month}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:19.525" level="INFO">Typing text '0' into text field '//input[@id='totalNumberOfEmployeesInMonth']'.</msg>
+<status status="PASS" starttime="20240109 16:51:19.523" endtime="20240109 16:51:19.605"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>//input[@id="totalNumberOfExcludedEmployeesInMonth"]</arg>
+<arg>${Total_Number_Of_Excluded_Employees_In_Month}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:19.608" level="INFO">Typing text '0' into text field '//input[@id="totalNumberOfExcludedEmployeesInMonth"]'.</msg>
+<status status="PASS" starttime="20240109 16:51:19.606" endtime="20240109 16:51:19.684"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>//input[@id="totalGrossWagesOfExcludedEmployeesInMonth"]</arg>
+<arg>${Total_Gross_Wages_Of_Excluded_Employees_In_Month}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:19.687" level="INFO">Typing text '0' into text field '//input[@id="totalGrossWagesOfExcludedEmployeesInMonth"]'.</msg>
+<status status="PASS" starttime="20240109 16:51:19.685" endtime="20240109 16:51:19.759"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//button[@id='submitEcr']</arg>
+<arg>timeout= 30</arg>
+<arg>error= unable to submit button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:19.760" endtime="20240109 16:51:19.791"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>//button[@id='submitEcr']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:19.802" level="INFO">Clicking element '//button[@id='submitEcr']'.</msg>
+<status status="PASS" starttime="20240109 16:51:19.792" endtime="20240109 16:51:19.853"/>
+</kw>
+<kw name="Handle Alert" library="RPA.Browser.Selenium">
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20240109 16:51:19.855" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240109 16:51:19.854" endtime="20240109 16:51:19.869"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//tr[td[text()='${transid[0]}']]//a[contains(@title, 'Click to finalize challan')]</arg>
+<arg>timeout= 30</arg>
+<arg>error= unable to find finalize element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:19.872" endtime="20240109 16:51:20.568"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>//tr[td[text()='${transid[0]}']]//a[contains(@title, 'Click to finalize challan')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:20.572" level="INFO">Clicking element '//tr[td[text()='4102401009074']]//a[contains(@title, 'Click to finalize challan')]'.</msg>
+<status status="PASS" starttime="20240109 16:51:20.569" endtime="20240109 16:51:20.622"/>
+</kw>
+<kw name="Handle Alert" library="RPA.Browser.Selenium">
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20240109 16:51:20.624" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240109 16:51:20.623" endtime="20240109 16:51:20.640"/>
+</kw>
+<kw name="Click Element When Visible">
+<arg>//span[@class="glyphicon glyphicon-download-alt"]</arg>
+<arg>DOwnload receipt file</arg>
+<arg>//tr[td[text()='${transid[0]}']]//a[contains(text(), 'Pay')]</arg>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<arg>timeout=120</arg>
+<arg>error=${Elementtype} not visible within 2m</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:20.645" endtime="20240109 16:51:21.308"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${PreLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:21.313" level="INFO">Clicking element '//span[@class="glyphicon glyphicon-download-alt"]'.</msg>
+<status status="PASS" starttime="20240109 16:51:21.309" endtime="20240109 16:51:21.473"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${PostLocator}</arg>
+<arg>timeout=30</arg>
+<arg>error= unable to navigate to next page</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:21.475" endtime="20240109 16:51:21.510"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully Clicked on ${Elementtype}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240109 16:51:21.516" level="INFO">Successfully Clicked on DOwnload receipt file</msg>
+<status status="PASS" starttime="20240109 16:51:21.512" endtime="20240109 16:51:21.517"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:20.642" endtime="20240109 16:51:21.518"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//tr[td[text()='${transid[0]}']]//a[contains(text(), 'Pay')]</arg>
+<arg>timeout= 30</arg>
+<arg>error= unable to find pay button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 16:51:21.520" endtime="20240109 16:51:21.542"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>//tr[td[text()='${transid[0]}']]//a[contains(text(), 'Pay')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 16:51:21.550" level="INFO">Clicking element '//tr[td[text()='4102401009074']]//a[contains(text(), 'Pay')]'.</msg>
+<status status="PASS" starttime="20240109 16:51:21.543" endtime="20240109 16:51:21.938"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:08.141" endtime="20240109 16:51:21.940"/>
+</kw>
+<status status="PASS" starttime="20240109 16:51:06.089" endtime="20240109 16:51:21.944"/>
+</test>
+<status status="PASS" starttime="20240109 16:50:22.939" endtime="20240109 16:51:21.955"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Buzzworks">Buzzworks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240109 16:50:24.586" level="WARN">No input work items file found: None</msg>
+</errors>
+</robot>
