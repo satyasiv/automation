@@ -2,6 +2,7 @@ from openpyxl import load_workbook
 import re
 from pathlib import Path
 
+print('hello world')
 def getdownloadpath():
     downloads_path = str(Path.home() / "Downloads")
     return downloads_path
